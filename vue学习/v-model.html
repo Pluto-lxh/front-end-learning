@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>v-model案例</title>
+		<script src="js/vue.js"></script>
+		<!--
+		<script>
+			window.onload=function(){
+				new Vue({
+					el:"#myvue",
+					data:{
+						name:"dgdfg"
+					}
+				});
+			}
+			
+		</script>
+		-->
+	</head>
+	<body>
+		<div id="myvue">
+			用户名<input type="text" v-model="name" />
+			{{name}}
+		</div>
+	</body>
+	
+	<script>
+		new Vue({
+			el:"#myvue",
+			data:{
+				name:"dgdfg"
+			}
+		});
+	</script>
+</html>
