@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>w3cschool菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            outline: 0;
+            text-decoration: none;
+            color: #900b09;
+        }
+
+        .nav-menu-list {
+            /* 这句样式与布局无关，只是调整位置让大家看的更清楚 */
+            margin: 100px;
+        }
+
+        .nav-menu-list li {
+            position: relative;
+            float: left;
+            padding: 14px 15px;
+        }
+
+        .nav-menu-list li a {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .nav-menu-list li a:hover {
+            color: #900b09;
+        }
+
+        .tag-icon {
+            display: inline-block;
+            /* 下面两句样式是我们需要重点关注的 */
+            position: absolute;
+            right: -12px;
+            top: -2px;
+            min-width: 36px;
+            padding: 2px;
+            background-color: #ffa01a;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            transform: scale(.6);
+            -webkit-transform: scale(.6);
+        }  
+
+        /*将二级菜单隐藏，*/
+        .dropdown-content {
+           /* display: none; */
+            top: 42px;
+            left: -25px;
+            width: 235px;
+        }
+
+        /*点击超链接时，显示二级菜单*/
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+      
+        .dropdown-content {
+            position: absolute;
+            left: -60px;
+            top: 80%;
+            background-color: #fff;
+            padding: 9px 0;
+            width: 150px;
+            z-index: 1200;
+            border: 1px solid #eee;
+            box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        .nav-menu-list .dropdown-content a {
+            width: 100px;
+            padding: 0 0 0 10px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            font-size: 15px;
+            color: #333;
+            text-align: center;
+        }
+       
+
+        .nav-menu-list .dropdown-content a:first-child::before {
+            border-bottom: 8px solid #fff;
+            border-left: 8px solid rgba(255, 255, 255, 0);
+            border-right: 8px solid rgba(255, 255, 255, 0);
+
+            content: "";
+            width: 0;
+            height: 0;
+            /* 注意，这里是核心重点 */
+            position: absolute;
+            left: 45%;
+            top: -8px;
+            margin-left: -50px;
+
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul class="nav-menu-list">
+        <li><a href="//www.w3cschool.cn/tutorial" title="编程入门教程">编程入门教程<i class="tag-icon free-icon">FREE</i></a></li>
+        <li><a href="//www.w3cschool.cn/minicourse/" title="编程微课">编程微课<i class="hot-icon"></i></a></li>
+        <li><a href="//www.w3cschool.cn/codecamp/" title="编程实战">编程实战</a></li>
+        <li><a href="//www.w3cschool.cn/manual" title="开源技术文档">极客文档</a></li>
+        <li><a href="//123.w3cschool.cn/webtools" target="_blank" title="W3Cschool在线工具集合">在线工具</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">学院<i class="down-icon1 angle-down-icon"></i></a>
+            <div class="dropdown-content">
+                <a href="//www.w3cschool.cn/codecamp/" title="编程实战训练">编程实战训练</a>
+                <a href="//www.w3cschool.cn/examples" title="编程实例">编程实例</a>
+                <a href="//www.w3cschool.cn/exam/" title="编程题库">编程题库</a>
+                <a href="//www.w3cschool.cn/question/" title="编程问答">编程问答</a>
+                <a href="//www.w3cschool.cn/codedemo" title="代码实例">代码实例</a>
+            </div>
+        </li>
+        <li><a href="//www.w3cschool.cn/vip" title="会员">会员<i class="tag-icon vip-icon">VIP</i></a></li>
+    </ul>
+</body>
+</html>

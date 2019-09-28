@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position属性</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #555;
+        }
+        .absolute{
+            position: absolute;
+            background-color: antiquewhite;
+            top: 100px;
+            left: 200px;
+        }
+        .relative{
+            position: relative;
+            top: 100px;
+            left: 200px;
+            background-color: aqua;
+        }
+        .static{
+            position: static;
+            top: 100px;
+            left: 200px;
+        }
+        .fixed{
+            position: fixed;
+            top: 50px;
+            right: 50px;
+        }
+    </style>
+</head>
+<body>
+    你好吗？<br>
+    how are you?<br>
+    没话说了...<br>
+    <div class="absolute">absolute脱离标准文档流，漂浮于页面之上，不受其他元素的影响</div>
+    <div class="relative">relative以上一个元素为参照定位。原来占有的空间依然保留</div>
+    <div class="static">正常标准流,设置top、left值不会起作用</div>
+    <div class="fixed">固定定位，相对于浏览器窗口定位</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+
+</body>
+</html>

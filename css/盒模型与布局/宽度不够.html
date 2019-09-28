@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>box-sizing和overflow</title>
+    <style>
+        /*
+            宽度不够，使用box-sizing
+            高度不够，使用overflow
+        */
+        #wrap{
+            width:1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        div{
+            border:5px solid #000;
+        }
+        #left{
+            width:200px;
+            background:red;
+            height: 300px;
+            float: left;
+            box-sizing: border-box;
+
+        }
+        #right{
+            width:800px;
+            background:green;
+            height: 300px;
+            float: left;
+            box-sizing: border-box;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div id="left">左侧</div>
+        <div id="right">右侧</div>
+    </div>
+</body>
+</html>

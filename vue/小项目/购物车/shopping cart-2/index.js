@@ -3,26 +3,28 @@ var app=new Vue({
     data:{
         list: [
            {
-               id:1,
-               name:"HUAWEI Mate30",
-               price:4999,
-               count:1,
-               check:false
+                title:'蔬菜',
+                subItem:[
+                    {name:'金针菇',price:2.5,count:10},
+                    { name:'土豆', price:0.8, count:3}
+                ]
            },
            {
-                id:1,
-                name:"iPad 2018",
-                price:2999,
-                count:1,
-                check:false
-            },
-            {
-                id:1,
-                name:"HUAWEI P20",
-                price:3500,
-                count:1,
-                check:false
-            },
+                title:'水果',
+                subItem:[
+                    {name:'苹果',price:7,count:20},
+                    {name:"西瓜",price:1.2,count:1}
+                ]
+           },
+           {
+               title:"衣服",
+               subItem:[
+                   {name:"短袖",price:85,count:2},
+                   {name:'运动裤',price:149,count:1},
+                   {name:"袜子",price:10,count:10}
+               ]
+           }
+          
         ],
         checked:false
          

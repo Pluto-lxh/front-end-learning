@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08-应用场景-圣杯布局、双飞翼布局</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background: #bfbfbf;
+        }
+
+        .header {
+            width: 100%;
+            height: 90px;
+            background: #55d4eb;
+        }
+
+         /*
+           1、左右两边固定宽度
+           2、使用绝对定位，元素脱离标准文档流
+           3、父元素使用相对定位，在文档流里占着中间的位置
+           4、中间布局宽度铺满屏幕,左右两边的padding=左右两边栏的宽度
+        */
+        .main{
+            position: relative;
+        }
+        .sidebar-left {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            background: #a0c263;
+           
+        }
+
+        .sidebar-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            
+            background: #a0c263;
+        }
+
+        .content {
+            padding: 0 200px;
+          
+            background: #f5c531;
+        }
+
+        .footer {
+            width: 100%;
+            height: 90px;
+            background: #ffa500;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            header
+        </header>
+        <div class="main clearfix">
+            <aside class="sidebar-left">
+                <p>青年问禅师：“我相了很多亲，向很多喜欢的女孩表了白，没有一次成功的，为什么会这样？”禅师不语默默的站起来脱了裤子撒了泡尿，“禅师你这是干什么”，“过来看看你就明白了”。</p>
+                <p>女子问禅师：为何有的人浅薄无知又蠢又傻却能找到高富帅，而机智聪明温柔善良如我，却始终没法脱团呢？禅师不语，拿出一张百元纸币，又拿出一张一元纸币。女子问：“大师的意思是财富终有一日会散去？”禅师说：“不，看脸。”</p>
+            </aside>
+            <div class="content">
+                <p>程序员问禅师：“我和在一起7年的女友分手了，程序员是否诸多和爱情无缘?”禅师笑而不语，把程序员带到正在比赛的球场。程序员大悟：“大师的意思是否是说：爱情的意义就像一场比赛，只要过程努力过，结果如何并不重要?”大师闭上眼睛道：“你分手关我球事?</p>
+            </div>
+            <aside class="sidebar-right">
+                    青年：“我想要有很多钱。”禅师：“只要你能找到七个球，你的愿望就能会实现。”青年：“您是说七龙珠吗？”禅师摇摇头：“不，是双色球…”
+            </aside>
+        </div>
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
+</body>
+</html>

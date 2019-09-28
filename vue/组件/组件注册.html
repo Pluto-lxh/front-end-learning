@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的第一个组件</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{hello}}
+        <my-component></my-component>
+        <my-components></my-components>
+    </div>
+    
+    <script>
+        //全局注册组件
+        Vue.component('my-component', { 
+           /* 
+            template:'这是组件的内容' 
+            如果不加标签直接显示文本，会报错：Component template requires a root element, rather than just text 
+           */
+           template:'<p>这是全局组件的内容</p>' 
+            
+        });
+
+        var Child={
+            template:'<p>这是局部注册组件的内容</p>'
+        }
+        var app=new Vue({
+            el:'#app',
+            data:{
+                hello:"i am fine"
+            },
+
+            components:{
+                'my-components':Child
+            }
+        })
+        
+    </script>
+</body>
+</html>
