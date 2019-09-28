@@ -1,2 +1,2 @@
 # front-end study
- 前端学习笔记
+ 前端练习
