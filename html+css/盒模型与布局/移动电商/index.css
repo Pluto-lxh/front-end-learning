@@ -1,0 +1,69 @@
+body{
+    background:yellowgreen;
+}
+
+/*版心*/
+.jd_container{
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    background: pink;
+    
+}
+
+/*顶部搜索*/
+.jd_search{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    
+}
+
+/*搜索内容居中*/
+.jd_search .jd_search_box{
+    height: 40px;
+    background:red;
+    min-width: 320px;
+    max-width: 640px;
+    margin:0 auto;
+    position: relative;
+   
+}
+
+.jd_search .jd_search_box .logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 60px;
+    height: 40px;
+}
+.jd_search .jd_search_box .login{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: yellow;
+}
+.jd_search .jd_search_box form{
+
+    padding-left: 70px;
+    padding-right: 50px;
+}
+.jd_search .jd_search_box form .icon_search{
+
+}
+.jd_search .jd_search_box form input{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    background: #fff;
+    border-radius:15px;
+    padding-left: 40px; 
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>H5全屏接口</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="全屏"  id="full" />
+        <input type="button" value="退出全屏" id="exitFull" />
+        <input type="button" value="是否全屏" id="isFull" />
+    </div>
+  
+
+    <script>
+        window.onload=function(){
+            var div=document.querySelector("div");
+            //全屏
+            document.querySelector("#full").onclick=function(){
+                //div.webkitRequestFullScreen(); 
+                if(div.requestFullscreen){
+                    div.requestFullscreen();
+                }else if(div.webkitRequestFullScreen){
+                    div.webkitRequestFullScreen();
+                }else if(div.mozRequestFullscreen){
+                    div.mozRequestFullscreen();
+                }else if(div.msRequestFullscreen){
+                    div.msRequestFullscreen();
+                }
+            }
+
+            //退出全屏
+            //注意：使用doucument来调动，整个文档退出全屏
+            document.querySelector("#exitFull").onclick=function(){
+                document.mozRequestFullScreen();
+                /* if(document.cancelFullscreen){
+                    document.cancelFullscreen();
+                }else if(document.webkitCancelFullScreen){
+                    document.webkitCancelFullScreen();
+                }else if(document.mozCancelFullscreen){
+                    document.mozCancelFullscreen();
+                }else if(document.msCancelFullscreen){
+                    document.msCancelFullscreen();
+                } */
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据通讯</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <father></father>
+        
+    </div>
+    <template id="f1">
+        <div>
+           <son :aaa="attr1"></son>
+        </div>
+    </template>
+    <template id="s1">
+        <div>
+            {{aaa}} <!-- 在子组件中调用父组件的属性 -->
+        </div>
+    </template>
+    
+    <script>
+        var vm=new Vue({
+            el:'#app',
+            components:{
+                "father":{
+                    template:"#f1",
+                    data(){
+                        return{
+                            attr1:"我是父组件的数据"
+                        }
+                    },
+                    components:{
+                        "son":{
+                            template:"#s1",
+                        data(){
+                            return{
+                                attr2:"我是子组件的数据"
+                            }
+                        },
+                        props:["aaa"]
+                        }
+                        
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

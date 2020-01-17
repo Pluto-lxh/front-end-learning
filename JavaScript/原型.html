@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+           // console.log(this);//this指向当前的实例对象
+           console.log(this.eat());
+        }
+        Person.prototype.eat=function(){
+            console.log(this);
+        }
+
+        var p=new Person("zs",13);
+        //var p2=new Person("12",12);
+
+       
+    
+            
+      
+
+       /*  function Person(name){
+            this.name=name;
+        }
+        Person.prototype={
+            constuctor:Person,
+            age:14
+        }
+        var p=new Person("zs");
+        console.dir(Person);
+        console.dir(p); */
+
+        /* function Person(name){
+            this.name=name;
+        }
+        var p=new Person("zs");
+        Person.prototype.age=13;
+        console.dir(Person);//构造函数
+        console.dir(p);//实例对象
+        console.log(Person.constructor);
+        console.log(p.constructor);
+        console.log(Person.constructor==p.constructor);//false
+        console.log(Person.prototype==p.__proto__);//true */
+    </script>
+</body>
+</html>
